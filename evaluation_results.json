@@ -1,0 +1,372 @@
+{
+  "metrics": {
+    "exact_match_accuracy": 53.333333333333336,
+    "mean_token_accuracy": 89.15278662208486,
+    "mean_error": 0.10847213377915135,
+    "rmse": 0.329351079820837,
+    "total_examples": 45,
+    "exact_matches": 24
+  },
+  "results": [
+    {
+      "question": "Context: CREATE TABLE table_8083 (\n    \"Res.\" text,\n    \"Record\" text,\n    \"Opponent\" text,\n    \"Met",
+      "expected": "SELECT \"Record\" FROM table_8083 WHERE \"Method\" = 'ko' AND \"Opponent\" = 'rich guerin'",
+      "predicted": "SELECT \"Record\" FROM table_8083 WHERE \"Method\" = 'ko' AND \"Opponent\" = 'rich guerin'",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_99 (\n    having__things_ VARCHAR,\n    interacting__settings_ VARCHA",
+      "expected": "SELECT having__things_ FROM table_name_99 WHERE interacting__settings_ = \"privacy, intimate spaces of togetherness\"",
+      "predicted": "SELECT having__things_ FROM table_name_99 WHERE interacting__settings_ = \"privacy, intimate spaces of togetherness\"",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE Lessons (\n    lesson_id INTEGER,\n    customer_id INTEGER,\n    lesson_status_co",
+      "expected": "SELECT date_of_birth, COUNT(date_of_birth) FROM Customers WHERE customer_status_code = 'Good Customer' ORDER BY date_of_birth",
+      "predicted": "SELECT date_of_birth, COUNT(*) FROM Customers WHERE customer_status_code = 'Good Customer' ORDER BY date_of_birth",
+      "exact_match": false,
+      "token_accuracy": 0.9166666666666666,
+      "error": 0.08333333333333337
+    },
+    {
+      "question": "Context: CREATE TABLE Accounts (\n    Account_ID INTEGER,\n    Statement_ID INTEGER,\n    Account_Detai",
+      "expected": "SELECT Budget_Type_Code, COUNT(*) FROM Documents_with_Expenses GROUP BY Budget_Type_Code",
+      "predicted": "SELECT Budget_Type_Code, COUNT(*) FROM Documents_with_Expenses GROUP BY Budget_Type_Code",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE prescriptions (\n    subject_id text,\n    hadm_id text,\n    icustay_id text,\n  ",
+      "expected": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN lab ON demographic.hadm_id = lab.hadm_id WHERE demographic.admityear < \"2148\" AND lab.\"CATEGORY\" = \"Hematology\"",
+      "predicted": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN lab ON demographic.hadm_id = lab.hadm_id WHERE demographic.admityear < \"2148\" AND lab.fluid = \"Hematology\"",
+      "exact_match": false,
+      "token_accuracy": 0.9473684210526315,
+      "error": 0.052631578947368474
+    },
+    {
+      "question": "Context: CREATE TABLE Customers (\n    Customer_ID INTEGER,\n    Customer_Details VARCHAR(255)\n)\n\nCREA",
+      "expected": "SELECT Date_Payment_Made, COUNT(Date_Payment_Made) FROM Payments WHERE Payment_Method_Code = 'Visa' ORDER BY COUNT(Date_Payment_Made)",
+      "predicted": "SELECT Date_Payment_Made, COUNT(*) FROM Payments WHERE Payment_Method_Code = \"visa\" GROUP BY Date_Payment_Made ORDER BY COUNT(*)",
+      "exact_match": false,
+      "token_accuracy": 0.8181818181818182,
+      "error": 0.18181818181818177
+    },
+    {
+      "question": "Context: CREATE TABLE school (\n    School_ID int,\n    Grade text,\n    School text,\n    Location text",
+      "expected": "SELECT Name, Age FROM driver",
+      "predicted": "SELECT Name, Age FROM driver",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_71 (\n    date VARCHAR,\n    result VARCHAR\n)\n\nQuestion: When was the",
+      "expected": "SELECT date FROM table_name_71 WHERE result = \"l 14\u201324\"",
+      "predicted": "SELECT date FROM table_name_71 WHERE result = \"l 14 24\"",
+      "exact_match": false,
+      "token_accuracy": 0.8888888888888888,
+      "error": 0.11111111111111116
+    },
+    {
+      "question": "Context: CREATE TABLE ENROLL (\n    CLASS_CODE varchar(5),\n    STU_NUM int,\n    ENROLL_GRADE varchar(",
+      "expected": "SELECT DEPT_CODE, COUNT(*) FROM PROFESSOR WHERE PROF_HIGH_DEGREE = 'Ph.D.' GROUP BY DEPT_CODE ORDER BY COUNT(*)",
+      "predicted": "SELECT DEPT_CODE, COUNT(PROF_HIGH_DEGREE) FROM PROFESSOR GROUP BY DEPT_CODE ORDER BY COUNT(PROF_HIGH_DEGREE)",
+      "exact_match": false,
+      "token_accuracy": 0.5384615384615384,
+      "error": 0.46153846153846156
+    },
+    {
+      "question": "Context: CREATE TABLE table_34602 (\n    \"Draw\" real,\n    \"Artist\" text,\n    \"Song\" text,\n    \"Jury\" ",
+      "expected": "SELECT MIN(\"Place\") FROM table_34602 WHERE \"Total\" < '24' AND \"Draw\" > '7'",
+      "predicted": "SELECT MIN(\"Place\") FROM table_34602 WHERE \"Total\" < 24 AND \"Draw\" > 7",
+      "exact_match": false,
+      "token_accuracy": 0.8333333333333334,
+      "error": 0.16666666666666663
+    },
+    {
+      "question": "Context: CREATE TABLE table_18890 (\n    \"Region/country\" text,\n    \"1985-1990\" text,\n    \"1990-1995\"",
+      "expected": "SELECT \"1995-2000\" FROM table_18890 WHERE \"1985-1990\" = '1.24'",
+      "predicted": "SELECT \"1995-2000\" FROM table_18890 WHERE \"1985-1990\" = '1.24'",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE Manufacturers (\n    Code INTEGER,\n    Name VARCHAR(255),\n    Headquarter VARCH",
+      "expected": "SELECT Name, COUNT(Name) FROM Products GROUP BY Name ORDER BY COUNT(Name) DESC",
+      "predicted": "SELECT Name, COUNT(Name) FROM Products GROUP BY Name ORDER BY COUNT(Name) DESC",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_19203 (\n    \"Designation\" text,\n    \"Bus width (bits)\" real,\n    \"Channe",
+      "expected": "SELECT MIN(\"Clock rate (MHz)\") FROM table_19203",
+      "predicted": "SELECT MIN(\"Clock rate (MHz)\") FROM table_19203",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_203_336 (\n    id number,\n    \"#\" number,\n    \"date\" text,\n    \"opponent\"",
+      "expected": "SELECT \"date\" FROM table_203_336 WHERE \"win\" = 'murray' AND \"date\" > 6 ORDER BY \"date\" LIMIT 1",
+      "predicted": "SELECT \"date\" FROM table_203_336 WHERE \"win\" = 'murray' AND \"date\" > 'july 6' ORDER BY \"date\" LIMIT 1",
+      "exact_match": false,
+      "token_accuracy": 0.9333333333333333,
+      "error": 0.06666666666666665
+    },
+    {
+      "question": "Context: CREATE TABLE Votes (\n    Id number,\n    PostId number,\n    VoteTypeId number,\n    UserId nu",
+      "expected": "SELECT u.Id AS \"user_link\", COUNT(v.Id) AS NumberOfCounterexamples FROM SuggestedEditVotes AS v JOIN Users AS u ON v.UserId = u.Id WHERE v.VoteTypeId = 2 AND u.Reputation >= 10000 GROUP BY u.Id ORDER BY NumberOfCounterexamples DESC",
+      "predicted": "SELECT * FROM SuggestedEdits WHERE ApprovalDate IS NOT NULL AND OwnerUserId IN (SELECT Id FROM Users WHERE Reputation >= 10000)",
+      "exact_match": false,
+      "token_accuracy": 0.24,
+      "error": 0.76
+    },
+    {
+      "question": "Context: CREATE TABLE table_21848 (\n    \"Club\" text,\n    \"Played\" text,\n    \"Won\" text,\n    \"Drawn\" ",
+      "expected": "SELECT \"Try bonus\" FROM table_21848 WHERE \"Tries against\" = '17'",
+      "predicted": "SELECT \"Try bonus\" FROM table_21848 WHERE \"Tries against\" = '17'",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_21792 (\n    \"Rank\" real,\n    \"Country\" text,\n    \"Miss United Continent\"",
+      "expected": "SELECT MIN(\"Miss United Continent\") FROM table_21792",
+      "predicted": "SELECT MIN(\"Miss United Continent\") FROM table_21792",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE people (\n    People_ID int,\n    Name text,\n    Height real,\n    Weight real,\n ",
+      "expected": "SELECT Height, Weight FROM people",
+      "predicted": "SELECT Height, Weight FROM people",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_12398 (\n    \"Place\" text,\n    \"Player\" text,\n    \"Country\" text,\n    \"Sc",
+      "expected": "SELECT AVG(\"Score\") FROM table_12398 WHERE \"Player\" = 'nick faldo'",
+      "predicted": "SELECT \"Score\" FROM table_12398 WHERE \"Player\" = 'Nick Faldo'",
+      "exact_match": false,
+      "token_accuracy": 0.8888888888888888,
+      "error": 0.11111111111111116
+    },
+    {
+      "question": "Context: CREATE TABLE prescriptions (\n    row_id number,\n    subject_id number,\n    hadm_id number,\n",
+      "expected": "SELECT prescriptions.drug FROM prescriptions WHERE prescriptions.hadm_id IN (SELECT admissions.hadm_id FROM admissions WHERE admissions.subject_id = 52898) AND prescriptions.route = 'right ear' AND STRFTIME('%y-%m', prescriptions.startdate) >= '2105-02' ORDER BY prescriptions.startdate DESC LIMIT 1",
+      "predicted": "SELECT drug FROM prescriptions WHERE subject_id = 52898 AND route = 'right ear' AND startdate >= '2105-02-01' ORDER BY startdate DESC LIMIT 1",
+      "exact_match": false,
+      "token_accuracy": 0.5384615384615384,
+      "error": 0.46153846153846156
+    },
+    {
+      "question": "Context: CREATE TABLE broadcast (\n    Channel_ID int,\n    Program_ID int,\n    Time_of_day text\n)\n\nCR",
+      "expected": "SELECT Owner, SUM(Rating_in_percent) FROM channel GROUP BY Owner ORDER BY SUM(Rating_in_percent)",
+      "predicted": "SELECT Owner, Rating_in_percent FROM channel ORDER BY Rating_in_percent",
+      "exact_match": false,
+      "token_accuracy": 0.5555555555555556,
+      "error": 0.4444444444444444
+    },
+    {
+      "question": "Context: CREATE TABLE table_203_109 (\n    id number,\n    \"treaty\" text,\n    \"organization\" text,\n   ",
+      "expected": "SELECT \"treaty\" FROM table_203_109 ORDER BY \"ratified\" DESC LIMIT 1",
+      "predicted": "SELECT \"treaty\" FROM table_203_109 WHERE \"organization\" = 'morocco' ORDER BY \"ratified\" DESC LIMIT 1",
+      "exact_match": false,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE exhibition_record (\n    Exhibition_ID int,\n    Date text,\n    Attendance int\n)",
+      "expected": "SELECT Name, Age FROM artist ORDER BY Age",
+      "predicted": "SELECT Name, Age FROM artist ORDER BY Age",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_32 (\n    laps VARCHAR,\n    time_retired VARCHAR,\n    grid VARCHAR\n)",
+      "expected": "SELECT COUNT(laps) FROM table_name_32 WHERE time_retired = \"+ 4 laps\" AND grid > 20",
+      "predicted": "SELECT COUNT(laps) FROM table_name_32 WHERE time_retired = \"+4 laps\" AND grid > 20",
+      "exact_match": false,
+      "token_accuracy": 0.8571428571428571,
+      "error": 0.1428571428571429
+    },
+    {
+      "question": "Context: CREATE TABLE table_204_87 (\n    id number,\n    \"courthouse\" text,\n    \"city\" text,\n    \"str",
+      "expected": "SELECT \"jurisdiction\" FROM table_204_87 GROUP BY \"jurisdiction\" ORDER BY COUNT(*) DESC LIMIT 1",
+      "predicted": "SELECT \"jurisdiction\" FROM table_204_87 GROUP BY \"jurisdiction\" ORDER BY COUNT(*) DESC LIMIT 1",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_86 (\n    labour INTEGER,\n    lib_dem INTEGER\n)\n\nQuestion: Name the ",
+      "expected": "SELECT MAX(labour) FROM table_name_86 WHERE lib_dem > 21",
+      "predicted": "SELECT MAX(labour) FROM table_name_86 WHERE lib_dem > 21",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE lab (\n    subject_id text,\n    hadm_id text,\n    itemid text,\n    charttime te",
+      "expected": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN lab ON demographic.hadm_id = lab.hadm_id WHERE demographic.admityear < \"2182\" AND lab.fluid = \"Urine\"",
+      "predicted": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN lab ON demographic.hadm_id = lab.hadm_id WHERE demographic.admityear < \"2182\" AND lab.fluid = \"urine\"",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE Draft_Copies (\n    document_id INTEGER,\n    draft_number INTEGER,\n    copy_num",
+      "expected": "SELECT receipt_date, COUNT(receipt_date) FROM Documents ORDER BY COUNT(receipt_date) DESC",
+      "predicted": "SELECT receipt_date, COUNT(receipt_date) FROM Documents GROUP BY receipt_date ORDER BY COUNT(receipt_date) DESC",
+      "exact_match": false,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE departments (\n    DEPARTMENT_ID decimal(4,0),\n    DEPARTMENT_NAME varchar(30),",
+      "expected": "SELECT HIRE_DATE, COMMISSION_PCT FROM employees WHERE HIRE_DATE < '2002-06-21' ORDER BY HIRE_DATE DESC",
+      "predicted": "SELECT HIRE_DATE, COMMISSION_PCT FROM employees WHERE HIRE_DATE < '2002-06-21' ORDER BY HIRE_DATE DESC",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE locations (\n    LOCATION_ID decimal(4,0),\n    STREET_ADDRESS varchar(40),\n    ",
+      "expected": "SELECT HIRE_DATE, SUM(MANAGER_ID) FROM employees WHERE HIRE_DATE < '2002-06-21' ORDER BY SUM(MANAGER_ID)",
+      "predicted": "SELECT HIRE_DATE, SUM(MANAGER_ID) FROM employees WHERE HIRE_DATE < '2002-06-21' ORDER BY SUM(MANAGER_ID)",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE list (\n    LastName TEXT,\n    FirstName TEXT,\n    Grade INTEGER,\n    Classroom",
+      "expected": "SELECT Classroom, Grade FROM list",
+      "predicted": "SELECT Classroom, Grade FROM list",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_65266 (\n    \"Township\" text,\n    \"County\" text,\n    \"Pop. (2010)\" real,\n",
+      "expected": "SELECT SUM(\"Land ( sqmi )\") FROM table_65266 WHERE \"ANSI code\" < '1036538' AND \"Pop. (2010)\" < '42' AND \"Longitude\" > '-99.442872' AND \"Water (sqmi)\" > '0.882'",
+      "predicted": "SELECT SUM(\"Land ( sqmi )\") FROM table_65266 WHERE \"ANSI code\" < '1036538' AND \"Pop. (2010)\" < '42' AND \"Longitude\" > '-99.442872' AND \"Water (sqmi)\" > '0.882'",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE Student_Course_Enrolment (\n    student_id VARCHAR\n)\n\nQuestion: How many distin",
+      "expected": "SELECT COUNT(DISTINCT student_id) FROM Student_Course_Enrolment",
+      "predicted": "SELECT COUNT(DISTINCT student_id) FROM Student_Course_Enrolment",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE PostNotices (\n    Id number,\n    PostId number,\n    PostNoticeTypeId number,\n ",
+      "expected": "SELECT Id AS \"post_link\", Score FROM Posts WHERE NOT DeletionDate IS NULL ORDER BY Score LIMIT 100",
+      "predicted": "SELECT Id AS \"post_link\", Score FROM PostsWithDeleted WHERE PostTypeId = 1 AND DeletionDate IS NULL ORDER BY Score LIMIT 5",
+      "exact_match": false,
+      "token_accuracy": 0.8125,
+      "error": 0.1875
+    },
+    {
+      "question": "Context: CREATE TABLE lab (\n    subject_id text,\n    hadm_id text,\n    itemid text,\n    charttime te",
+      "expected": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN procedures ON demographic.hadm_id = procedures.hadm_id WHERE demographic.admission_type = \"EMERGENCY\" AND procedures.short_title = \"Replace small bowel tube\"",
+      "predicted": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN procedures ON demographic.hadm_id = procedures.hadm_id WHERE demographic.admission_location = \"EMERGENCY\" AND procedures.long_title = \"Replacement of small bowel tube\"",
+      "exact_match": false,
+      "token_accuracy": 0.8571428571428571,
+      "error": 0.1428571428571429
+    },
+    {
+      "question": "Context: CREATE TABLE procedures (\n    subject_id text,\n    hadm_id text,\n    icd9_code text,\n    sh",
+      "expected": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN diagnoses ON demographic.hadm_id = diagnoses.hadm_id WHERE demographic.insurance = \"Medicare\" AND diagnoses.long_title = \"Iatrogenic cerebrovascular infarction or hemorrhage\"",
+      "predicted": "SELECT COUNT(DISTINCT demographic.subject_id) FROM demographic INNER JOIN diagnoses ON demographic.hadm_id = diagnoses.hadm_id WHERE demographic.insurance = \"Medicare\" AND diagnoses.long_title = \"Iatrogenic cerebrovascular infarction or hemorrhage\"",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE playlist_tracks (\n    playlist_id number,\n    track_id number\n)\n\nCREATE TABLE ",
+      "expected": "SELECT COUNT(*), city FROM employees WHERE title = 'IT Staff' GROUP BY city",
+      "predicted": "SELECT city, COUNT(*) FROM employees WHERE title = 'IT staff' GROUP BY city",
+      "exact_match": false,
+      "token_accuracy": 0.9166666666666666,
+      "error": 0.08333333333333337
+    },
+    {
+      "question": "Context: CREATE TABLE Comments (\n    Id number,\n    PostId number,\n    Score number,\n    Text text,\n",
+      "expected": "SELECT P.Title FROM Posts AS P, PostTags AS Pt, Tags AS T WHERE P.Id = Pt.PostId AND T.Id = Pt.TagId AND T.TagName = '##tags##' AND P.Tags LIKE '<%##tag2##%>' AND P.PostTypeId = 1 AND P.ClosedDate IS NULL",
+      "predicted": "SELECT Id AS \"postId\", Score, ViewCount, CreationDate, Tags, AnswerCount, CommentCount, FavoriteCount FROM Posts WHERE PostTypeId = 1 AND AnswerCount = 0 AND Tags LIKE '%<tag1>%' AND Tags LIKE '%<tag2>%' ORDER BY Score DESC",
+      "exact_match": false,
+      "token_accuracy": 0.36,
+      "error": 0.64
+    },
+    {
+      "question": "Context: CREATE TABLE table_26007767_1 (\n    localities INTEGER\n)\n\nQuestion: What is the highest loc",
+      "expected": "SELECT MAX(localities) FROM table_26007767_1",
+      "predicted": "SELECT MAX(localities) FROM table_26007767_1",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_11 (\n    location VARCHAR,\n    result VARCHAR\n)\n\nQuestion: What loc",
+      "expected": "SELECT location FROM table_name_11 WHERE result = \"29-14\"",
+      "predicted": "SELECT location FROM table_name_11 WHERE result = \"29-14\"",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_4275 (\n    \"Year\" real,\n    \"Starts\" real,\n    \"Wins\" real,\n    \"Top 5\" ",
+      "expected": "SELECT MAX(\"Poles\") FROM table_4275",
+      "predicted": "SELECT MAX(\"Poles\") FROM table_4275",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE wine (\n    No INTEGER,\n    Grape TEXT,\n    Winery TEXT,\n    Appelation TEXT,\n ",
+      "expected": "SELECT Grape, COUNT(*) FROM wine GROUP BY Grape ORDER BY Grape",
+      "predicted": "SELECT Grape, COUNT(*) FROM wine GROUP BY Grape ORDER BY Grape",
+      "exact_match": true,
+      "token_accuracy": 1.0,
+      "error": 0.0
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_79 (\n    total VARCHAR,\n    league_cup_goals VARCHAR,\n    fa_cup_go",
+      "expected": "SELECT total FROM table_name_79 WHERE league_cup_goals = \"4\" AND fa_cup_goals = \"0\"",
+      "predicted": "SELECT SUM(total) FROM table_name_79 WHERE league_cup_goals = 4 AND fa_cup_goals = 0",
+      "exact_match": false,
+      "token_accuracy": 0.7272727272727273,
+      "error": 0.2727272727272727
+    },
+    {
+      "question": "Context: CREATE TABLE table_name_27 (\n    game_site VARCHAR,\n    result VARCHAR\n)\n\nQuestion: What ga",
+      "expected": "SELECT game_site FROM table_name_27 WHERE result = \"l 21\u201313\"",
+      "predicted": "SELECT game_site FROM table_name_27 WHERE result = \"l 21 13\"",
+      "exact_match": false,
+      "token_accuracy": 0.8888888888888888,
+      "error": 0.11111111111111116
+    },
+    {
+      "question": "Context: CREATE TABLE table_78169 (\n    \"Number\" real,\n    \"Name\" text,\n    \"Team\" text,\n    \"Positi",
+      "expected": "SELECT \"Years with franchise\" FROM table_78169 WHERE \"Number\" = '9'",
+      "predicted": "SELECT COUNT(\"Years with franchise\") FROM table_78169 WHERE \"Team\" = 'slot number 9'",
+      "exact_match": false,
+      "token_accuracy": 0.6,
+      "error": 0.4
+    }
+  ]
+}

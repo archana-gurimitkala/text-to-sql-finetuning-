@@ -1,0 +1,23 @@
+# Environment variables (contains API key - keep secret!)
+.env
+
+# Model ID (generated after fine-tuning)
+model_id.txt
+
+# Data files (can regenerate)
+data/*.jsonl
+data/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
