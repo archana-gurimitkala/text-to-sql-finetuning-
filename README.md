@@ -4,7 +4,8 @@ A model that converts plain English questions into SQL queries.
 
 ## About This Project
 
-I built this project to learn fine-tuning after completing Ed Donner's LLM Engineering course (Week 6).
+I wanted to understand what fine-tuning actually involves beyond just calling an API, so I picked a problem I find genuinely useful — turning natural language into SQL. I started with a massive HuggingFace dataset of 260K+ examples, cleaned it down to 255 high-quality samples, and fine-tuned GPT-4o-mini on them. The final model hit 89% token accuracy, which honestly surprised me given how small the training set was.
+
 
 The idea is simple - you type a question like "Show all customers from New York" and the model gives you the SQL: `SELECT * FROM customers WHERE city = 'New York'`
 
