@@ -1,3 +1,14 @@
+---
+title: Text to SQL Fine-tuning
+emoji: 🗄️
+colorFrom: indigo
+colorTo: blue
+sdk: gradio
+sdk_version: "5.25.0"
+app_file: app.py
+pinned: false
+---
+
 # Text-to-SQL Generator
 
 A model that converts plain English questions into SQL queries.

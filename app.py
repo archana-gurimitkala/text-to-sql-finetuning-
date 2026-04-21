@@ -14,8 +14,11 @@ from dotenv import load_dotenv
 load_dotenv()
 client = OpenAI()
 
-# Load fine-tuned model ID
+# Load fine-tuned model ID — env var takes priority (for HF Spaces), fallback to file
 def load_model_id():
+    env_id = os.getenv("MODEL_ID")
+    if env_id:
+        return env_id
     try:
         with open("model_id.txt", "r") as f:
             return f.read().strip()

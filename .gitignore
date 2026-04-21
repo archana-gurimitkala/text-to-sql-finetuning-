@@ -21,3 +21,6 @@ venv/
 
 # OS
 .DS_Store
+
+# Screenshots (binary - excluded from git)
+*.png
